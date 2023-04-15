@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
+import WeB3ModalComp from "./WeB3ModalComp"
 
 const greetingContractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"; // for greeter.sol file
 
@@ -137,7 +138,8 @@ function App() {
   console.log(contract, "contract");
 
   if(!metamastIsSetup){
-    return <h2 style={{textAlign:"center"}}>Meta mask is not setup please setup mask and refersh the page</h2>
+    return <h2 style={{textAlign:"center"}}>Meta mask is not setup please setup mask and refersh the page  
+    </h2>
   }
   return (
     <>
@@ -171,6 +173,7 @@ function App() {
           </button>
         </div>
       </div>
+      <WeB3ModalComp />
     </>
   );
 }
