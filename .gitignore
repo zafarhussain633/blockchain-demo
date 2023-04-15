@@ -1,0 +1,38 @@
+contract/node_modules
+contract/.env
+contract/package-lock.json
+contract/coverage
+contract/coverage.json
+contract/typechain
+contract/typechain-types
+
+# Hardhat files
+contract/cache
+contract/artifacts
+
+
+
+
+# for client side react 
+# dependencies
+client/node_modules
+client/.pnp
+client/.pnp.js
+
+# testing
+client/coverage
+
+# production
+client/build
+
+# misc
+client/.DS_Store
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+client/package-lock.json
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
