@@ -51,8 +51,9 @@ const greeterAbi = [
 ];
 
 function App() {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const signer = provider.getSigner();
+  const metamastIsSetup = window.ethereum;
+  const provider =  metamastIsSetup && new ethers.providers.Web3Provider(window.ethereum);
+  const signer =  metamastIsSetup && provider.getSigner();
   const contract = new ethers.Contract(
     greetingContractAddress,
     greeterAbi,
@@ -113,6 +114,13 @@ function App() {
   };
 
   useEffect(() => {
+    if (!metamastIsSetup) {
+      window.open("https://metamask.io/download.html", "_blank");
+    }
+  }, []);
+
+
+  useEffect(() => {
     (async () => {
       await connectWallet();
       await getBalance();
@@ -128,6 +136,9 @@ function App() {
 
   console.log(contract, "contract");
 
+  if(!metamastIsSetup){
+    return <h2 style={{textAlign:"center"}}>Meta mask is not setup please setup mask and refersh the page</h2>
+  }
   return (
     <>
       <h1>welcome to web 3 js</h1>
