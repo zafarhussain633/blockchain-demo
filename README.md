@@ -10,7 +10,7 @@ a simple blockchain proj to connect blockchain network from react appication  . 
 3. run deploye contract:  **npx hardhat run scripts/deploy.js**
 4. run blockchain network by:   **npx hardhat node**   after running this command you will se below screenshot 
 5. copy any private key and import it in meta mask ![image](https://user-images.githubusercontent.com/37826183/232208271-2c907a93-2b5f-49dd-8e25-77ae803535af.png)
-note : make sure you have meta mask installed in your browser . and you have imported  http://localhost:8545/
+note : make sure you have meta mask installed in your browser . and you have imported  http://localhost:8545/  in meta mask 
 
 
 # for react app 
